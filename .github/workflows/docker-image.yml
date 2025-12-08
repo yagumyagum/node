@@ -1,15 +1,12 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
 
 jobs:
   build:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
-    - name: Node 16
+    - name: Node 16 배포
       run: sh ./node16/upload.sh $(date +%s)
