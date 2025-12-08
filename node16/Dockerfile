@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 FROM ghcr.io/yagumyagum/node:latest
 
 RUN export NVM_DIR="$HOME/.nvm" \
