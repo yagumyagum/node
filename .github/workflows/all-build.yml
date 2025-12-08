@@ -2,6 +2,7 @@ name: 노드 전체 빌드
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
   build:
