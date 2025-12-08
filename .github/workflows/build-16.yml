@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Node 16 빌드
-      run: cd ./node16 && sh ./build.sh $(date +%s)
+      run: cd ./node16 && sh ./upload.sh $(date +%s)
