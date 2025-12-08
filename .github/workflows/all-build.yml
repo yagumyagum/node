@@ -1,16 +1,13 @@
 name: 노드 전체 빌드
 
 on:
-  push:
-    branches: [ "main" ]
   workflow_call:
   workflow_dispatch:
 
 jobs:
   build:
-    name: build-node
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
-    - name: Node 16 배포
+    - name: Node 빌드
       run: sh ./build.sh $(date +%s)
