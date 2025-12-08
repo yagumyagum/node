@@ -10,4 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Node 18 빌드
-      run: cd ./node18 && sh ./upload.sh $(date +%s)
+      run: cd ./node18 
+           && docker build -t ghcr.io/yagumyagum/node18-ygyg:latest . 
+           && docker push ghcr.io/yagumyagum/node18-ygyg:latest
