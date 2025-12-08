@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: 노드 전체 빌드
 
 on:
   workflow_call:
