@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Node 16
-      run: docker build ./node16 --file ./node16/Dockerfile --tag node16:$(date +%s)
+      run: sh ./node16/upload.sh
