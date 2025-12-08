@@ -1,0 +1,13 @@
+name: 노드 18 빌드
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v4
+    - name: Node 18 빌드
+      run: cd ./node18 && sh ./upload.sh $(date +%s)
