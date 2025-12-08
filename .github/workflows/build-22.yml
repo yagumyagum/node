@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Node 22 빌드
-      run: cd ./node20
+      run: cd ./node22
            && docker build -t ghcr.io/yagumyagum/node22-ygyg:latest . 
            && docker push ghcr.io/yagumyagum/node22-ygyg:latest
