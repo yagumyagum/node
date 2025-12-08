@@ -1,0 +1,13 @@
+name: 노드 16 빌드
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v4
+    - name: Node 16 빌드
+      run: cd ./node16 && sh ./build.sh $(date +%s)
