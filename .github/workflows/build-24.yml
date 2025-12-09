@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Node 24 빌드
       run: cd ./node24
-           && docker build -t ghcr.io/yagumyagum/node24-ygyg:latest . 
-           && docker push ghcr.io/yagumyagum/node24-ygyg:latest
+           docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm64/v8 \ 
+           -t ghcr.io/yagumyagum/node18-ygyg:latest --push .
