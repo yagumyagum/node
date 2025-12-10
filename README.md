@@ -13,7 +13,28 @@
 - 일회성 작업공간 만들기 (폴더에 들어가서 실행해주세요.)
     ```
     # 16, 18, 20, 22, 24 등
-    docker run -it --rm -v "$(pwd)":/workspace ghcr.io/yagumyagum/node16-ygyg:latest bash
+    docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node16-ygyg:latest bash
+
+    docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node18-ygyg:latest bash
+
+    docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node20-ygyg:latest bash
+
+    docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node22-ygyg:latest bash
+
+    docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node24-ygyg:latest bash
+    ```
+
+- 로컬에 명령어로 만들기 (alias)
+    ```
+    alias node16='docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node16-ygyg:latest bash'
+
+    alias node18='docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node18-ygyg:latest bash'
+
+    alias node20='docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node20-ygyg:latest bash'
+
+    alias node22='docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node22-ygyg:latest bash'
+
+    alias node24='docker run -it --rm -v "$(pwd)":/workspace -w /workspace ghcr.io/yagumyagum/node24-ygyg:latest bash'
     ```
 ## 빌드방법
 1. 깃허브 액션을 활용합니다.
